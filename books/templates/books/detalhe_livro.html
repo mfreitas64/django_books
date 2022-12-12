@@ -1,0 +1,30 @@
+{% extends "books/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <table>
+        <tr class="panel-heading">
+            {% for l in books.sessoes_set.all %}
+                <td class="align-bottom"> <h4> {{ l.title }} </h4></td>
+                <td class="align-bottom"> <h4> {{ l.sessao_date }} </h4></td>
+            {% endfor %}
+        </tr>          
+    </table>
+    <br>
+    <div class="conatainer-fluid">
+        <div class="row">
+            <div class="col-md-6">    
+                <img align="center" widht="128" height="200" src= {{ object.image.url }}/>
+                <h5> {{ object.book_name }} </h5>
+                <h6> {{ object.description }} </h6>   
+            </div>       
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p> {{ object.sinopse }} </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
