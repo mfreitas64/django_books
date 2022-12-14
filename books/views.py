@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
+from django.db.models import F
 
 from .models import Sessoes, Books
 
@@ -27,6 +28,8 @@ class DetalhesLivro(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+#        context ['sessao'] = Sessoes.objects.values('title')
+        context ['sessao'] = Books.objects.select_related('sessaoid').get(pk=self.kwargs['pk'])
         return context
 
 def about(request):

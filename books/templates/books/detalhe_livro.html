@@ -4,12 +4,9 @@
 {% block content %}
 
     <table>
-        <tr class="panel-heading">
-            {% for l in books.sessoes_set.all %}
-                <td class="align-bottom"> <h4> {{ l.title }} </h4></td>
-                <td class="align-bottom"> <h4> {{ l.sessao_date }} </h4></td>
-            {% endfor %}
-        </tr>          
+            <tr class="panel-heading"> 
+                <td class="align-bottom"> <h4> {{ sessao.sessaoid.title }} - {{ sessao.sessaoid.sessao_date }}</h4></td>
+            </tr>          
     </table>
     <br>
     <div class="conatainer-fluid">
