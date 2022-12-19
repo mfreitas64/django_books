@@ -5,15 +5,14 @@
 <div class="col-12">
     <h2 class="text-left" style="margin-top: 0.3rem;">Sessões</h2>
 </div>
-<br>
 <div class="container-fluid">
     <div class="row">
         {% if displaybook %}
             {% for c in displaybook %}
-            <div class="col-md-6">    
-                <h5><a href="{% url 'book:detalhe' c.id %}"> {{ c.title }} </h5>
-                <p>Data da Sessão: {{ c.sessao_date }}</p>
-            </div>       
+            <div class="col-md-6">
+                    <h5><a href="{% url 'book:detalhe' c.id%}"> {{ c.title }} </h5>
+                    <p>Data da Sessão: {{ c.sessao_date }}</p>
+            </div>
             {% endfor %}
         {% else %}
             <p>Não há sessões</p>

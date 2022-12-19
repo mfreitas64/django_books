@@ -2,22 +2,17 @@
 {% load static %}
 
 {% block content %}
-
-    <table>
-        <tr class="panel-heading">
-            <td class="align-bottom"> <h4> {{ sessoes.title }} - {{ sessoes.sessao_date }}</h4></td>
-        </tr>          
-    </table>
-    <br>
-    <div class="conatainer-fluid">
-        <div class="row">
-                {% for livros in sessoes.books_set.all %}
-                <div class="col-md-6">    
-                    <img align="center" widht="128" height="200" src= {{ livros.image.url }}/>
-                    <h5><a href="{% url 'book:detalhe_livro' livros.id %}"> {{ livros.book_name }} </h5>
-                </div>       
-                {% endfor %}
-        </div>
+    <div class="row">
+        <h4> {{ sessoes.title }} - </h4>
+        <h4> {{ sessoes.sessao_date }} </h4>
     </div>
-
+    <br>
+    <div class="row">
+        {% for livros in sessoes.books_set.all %}
+            <div class="col-md-4"> 
+                <img widht="128" height="200" src= {{ livros.image.url }}/>
+                <p><a href="{% url 'book:detalhe_livro' livros.id %}"> {{ livros.book_name }} </a></p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
