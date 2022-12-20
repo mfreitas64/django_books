@@ -5,18 +5,25 @@
 <div class="col-12">
     <h2 class="text-left" style="margin-top: 0.3rem;">Sessões</h2>
 </div>
-<div class="container-fluid">
-    <div class="row">
+<div class="container">
+    <div class="row" justify-content-start>
         {% if displaybook %}
             {% for c in displaybook %}
-            <div class="col-md-6">
-                    <h5><a href="{% url 'book:detalhe' c.id%}"> {{ c.title }} </h5>
-                    <p>Data da Sessão: {{ c.sessao_date }}</p>
+            <div class="col-md-2 book margens">
+                    <h6><a href="{% url 'book:detalhe' c.id%}"> {{ c.title }}</a></h6>
+                    <p style="font-size:11px">{{ c.sessao_date }}</p>
             </div>
             {% endfor %}
         {% else %}
             <p>Não há sessões</p>
         {% endif %}
+        <div class="col-md-8">
+            <p>O Clube de leitura nasce da grande paixão pelos livros
+                da Ana e do António. A Ana desenvolveu o projecto da abelhinha
+                masi conhecido por Xylocopa e o António abriu uma livraria de 
+                livros usados, a Ror de Livros. 
+            </p>
+        </div>
     </div>
 </div>
 {% endblock content %}

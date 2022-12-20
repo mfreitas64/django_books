@@ -12,6 +12,11 @@ body {
     margin: 0;
   }
   
+  p {
+    margin-top: 5px ;
+    margin-bottom: 5px ;
+  }
+
   .bg-steel {
     background-color: #ec5809;
   }
@@ -81,4 +86,20 @@ body {
   
   .account-heading {
     font-size: 2.5rem;
+  }
+
+  .book {
+    border: 1px outset black;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    background-color: rgb(249, 246, 246);    
+    text-align: center;
+  }
+
+  .margens {
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 5px;
   }

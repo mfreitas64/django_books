@@ -28,7 +28,6 @@ class DetalhesLivro(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-#        context ['sessao'] = Sessoes.objects.values('title')
         context ['sessao'] = Books.objects.select_related('sessaoid').get(pk=self.kwargs['pk'])
         return context
 
