@@ -37,6 +37,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'books.apps.BooksConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -109,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-pt'
 
 TIME_ZONE = 'GMT'
 
@@ -127,3 +129,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'book:index'
+LOGIN_URL = 'login'

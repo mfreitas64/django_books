@@ -8,9 +8,10 @@
     <br>
     <a class="btn btn-outline-primary btn-sm" href="{% url 'book:index' %}">Voltar às Sessões</a>
     <br>
+    <br>
     <div class="row justify-content-center">
         {% for livros in sessoes.books_set.all %}
-            <div class="col-md-4 book margens"> 
+            <div class="col-md-3 book margens"> 
                 <img widht="128" height="200" src= {{ livros.image.url }}/>
                 <p><a href="{% url 'book:detalhe_livro' livros.id %}"> {{ livros.book_name }} </a></p>
                 <p> Autor: {{ livros.author }}</p>

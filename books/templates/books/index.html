@@ -3,27 +3,39 @@
 
 {% block content %}
 <div class="col-12">
-    <h2 class="text-left" style="margin-top: 0.3rem;">Sessões</h2>
+    <h2 class="text-left">Bem vindos</h2>
 </div>
 <div class="container">
+    <div class="row" justify-content-start>
+        <div class="col-md-12">
+            <p>O nosso clube de leitura surge da tremenda paixão pelos livros e da vontade inabalável dos nossos colegas 
+            António Jorge, da Ror de Livros e Ana Pereira, da Xylocopa Books, partilharem os seus projetos com a nossa comunidade. 
+            Um encontro feliz que veio proporcionar aos afortunados membros deste club de leitura a troca de opiniões, reflexões e 
+            críticas sobre os livros que vamos lendo e trazendo para estas sessões. Sendo ainda, a prática da leitura, uma atividade 
+            pouco frequente entre os portugueses, e considerando o enorme valor cultural gerado por este pequeno grupo de leitores, 
+            achámos que para além das sessões físicas, que realizamos no último Domingo de cada mês, e que por várias razões têm uma 
+            lotação limitada, seria uma boa ideia abrir as portas virtuais desta experiência às pessoas que estão interessadas em 
+            acompanhar e contribuir para esta causa mui nobre que é o ato de ler.
+            <br><br>    
+            No nosso site podem encontrar toda a informação sobre as diversas sessões e os livros que foram apresentados. 
+            Poderão também criar uma conta e contribuir, de forma construtiva, com comentários sobre as várias obras apresentadas.    
+            </p>
+        </div>
+    </div>
+    <div class="col-12">
+        <h2 class="text-left">Sessões</h2>
+    </div>
     <div class="row" justify-content-start>
         {% if displaybook %}
             {% for c in displaybook %}
             <div class="col-md-2 book margens">
                     <h6><a href="{% url 'book:detalhe' c.id%}"> {{ c.title }}</a></h6>
                     <p style="font-size:11px">{{ c.sessao_date }}</p>
-            </div>
+            </div>       
             {% endfor %}
         {% else %}
             <p>Não há sessões</p>
         {% endif %}
-        <div class="col-md-8">
-            <p>O Clube de leitura nasce da grande paixão pelos livros
-                da Ana e do António. A Ana desenvolveu o projecto da abelhinha
-                masi conhecido por Xylocopa e o António abriu uma livraria de 
-                livros usados, a Ror de Livros. 
-            </p>
-        </div>
     </div>
 </div>
 {% endblock content %}
