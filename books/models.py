@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -15,4 +16,6 @@ class Books(models.Model):
     description = models.CharField(max_length=250)
     sinopse = models.TextField()
     image = models.ImageField(upload_to='books/')
-    presented_by = models.CharField(max_length=50, default='Autor')
+#   presented_by = models.CharField(max_length=50, default='Autor')
+    presented_by = models.ForeignKey(User, on_delete=models.CASCADE)
+
