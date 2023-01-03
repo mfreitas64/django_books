@@ -5,8 +5,10 @@ from django.views import generic
 from django.views.generic import ListView, DetailView, CreateView
 from django.db.models import F
 from django.shortcuts import redirect
-
+from django.contrib.auth.mixins import PermissionRequiredMixin
+from .mixins import ValidateUsersPermissions
 from .models import Sessoes, Books
+from django.contrib import messages
 
 # Create your views here.
 
@@ -33,14 +35,14 @@ class DetalhesLivro(DetailView):
         context ['sessao'] = Books.objects.select_related('sessaoid').get(pk=self.kwargs['pk'])
         return context
 
-class SessoesCreateView(CreateView):
+class SessoesCreateView(ValidateUsersPermissions, CreateView):
     model = Sessoes
     fields = ['title', 'sessao_date']
     
     def get_success_url(self):
         return reverse('book:index')
 
-class BooksCreateView(CreateView):
+class BooksCreateView(ValidateUsersPermissions, CreateView):
     model = Books
     fields = ['sessaoid', 'book_name', 'author', 'description', 'sinopse', 'image']
 
@@ -51,3 +53,6 @@ class BooksCreateView(CreateView):
 
 def about(request):
     return render(request, 'books/about.html', {'title': 'About'})
+
+def denied(request):
+    return render(request, 'books/denied.html', {'title': 'Acesso Restrito'})

@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.models import Group
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
@@ -7,8 +8,10 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
+            user = form.save()
+#            username = form.cleaned_data.get('username')
+            group = Group.objects.get(name='Normal_Users')
+            user.groups.add(group)
             messages.success(request, f'A tua conta foi criada. Já podes realizar o Login')
             return redirect('login')
     else:
