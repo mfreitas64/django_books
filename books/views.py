@@ -1,17 +1,14 @@
-from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 from django.views.generic import ListView, DetailView, CreateView
 from django.db.models import F
 from django.shortcuts import redirect
-from django.contrib.auth.mixins import PermissionRequiredMixin
 from .mixins import ValidateUsersPermissions
-from .models import Sessoes, Books
+from .models import Sessoes, Books, Posts
 from django.contrib import messages
 
 # Create your views here.
-
 
 class IndexView(generic.ListView):
     template_name = 'books/index.html'
@@ -20,7 +17,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last five published Books."""
-        return Sessoes.objects.order_by('sessao_date')[:10]
+        return Sessoes.objects.order_by('sessao_date')[:12]
 
 class DetailView(generic.DetailView):
     model = Sessoes
@@ -48,6 +45,16 @@ class BooksCreateView(ValidateUsersPermissions, CreateView):
 
     def form_valid(self, form):
         form.instance.presented_by = self.request.user
+        form.save()
+        return super().form_valid(form)
+
+class PostsCreateView(CreateView):
+    model = Posts
+    fields = ['title', 'content']
+
+    def form_valid(self, form):
+        form.instance.posted_by = self.request.user
+        form.instance.bookid_id = self.kwargs['pk']
         form.save()
         return super().form_valid(form)
 

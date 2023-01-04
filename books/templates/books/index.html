@@ -29,7 +29,7 @@
         {% if displaybook %}
             {% for c in displaybook %}
             <div class="col-md-2 book margens">
-                    <h6><a href="{% url 'book:detalhe' c.id%}"> {{ c.title }}</a></h6>
+                    <h6><a href="{% url 'book:detalhe' c.id %}"> {{ c.title }}</a></h6>
                     <p style="font-size:11px">{{ c.sessao_date }}</p>
             </div>       
             {% endfor %}
