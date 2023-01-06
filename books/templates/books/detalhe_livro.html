@@ -33,7 +33,7 @@
                 <div class="media-body">
                     <div class="article-metadata">
                         {{ posts.posted_by }}
-                        <small class="text-muted"> {{ posts.posted_date|date:"F d, Y" }}</small>    
+                        <small class="text-muted"> {{ posts.date_posted|date:"F d, Y" }}</small>    
                     </div>
                     <h2 class=""article-title">{{ posts.title }}</h2>
                     <p class="article-content">{{ posts.content }}</p>

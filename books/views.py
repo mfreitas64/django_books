@@ -16,7 +16,6 @@ class IndexView(generic.ListView):
     context_object_name = 'displaybook'
 
     def get_queryset(self):
-        """Return the last five published Books."""
         return Sessoes.objects.order_by('sessao_date')[:12]
 
 class DetailView(generic.DetailView):
@@ -51,6 +50,11 @@ class BooksCreateView(ValidateUsersPermissions, CreateView):
 class PostsCreateView(CreateView):
     model = Posts
     fields = ['title', 'content']
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context ['book'] = Books.objects.get(pk=self.kwargs['pk'])
+        return context
 
     def form_valid(self, form):
         form.instance.posted_by = self.request.user
