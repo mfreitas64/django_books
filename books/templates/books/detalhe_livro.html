@@ -17,7 +17,7 @@
             <div class="col-md-2">   
                 <img class="icenter" align="center" widht="128" height="200" src= {{ object.image.url }}/>   
             </div>
-            <div class="col-md-6">
+            <div class="col-8">
                 <h5> {{ object.book_name }} </h5> 
                 <h6> {{ object.author }}</h6>
                 <h6> {{ object.description }} </h6>
@@ -28,17 +28,26 @@
     </div>
         <h3>Posts</h3>
         {% for posts in books.posts_set.all %}
-            <article class="media content-section">
-                <img class="rounded-circle article-img" src="{{ posts.posted_by.profile.image.url }}">
-                <div class="media-body">
-                    <div class="article-metadata">
-                        {{ posts.posted_by }}
-                        <small class="text-muted"> {{ posts.date_posted|date:"F d, Y" }}</small>    
-                    </div>
-                    <h2 class=""article-title">{{ posts.title }}</h2>
-                    <p class="article-content">{{ posts.content }}</p>
+        <div class="container"> 
+            <div class="row">
+                <div class="col">
                 </div>
-            </article>
-            <div>
+                <div class="col-8" align="left">
+                    <article class="media content-section">
+                                <div class="media-body">
+                                    <div class="article-metadata">
+                                        <img class="rounded-circle article-img" src="{{ posts.posted_by.profile.image.url }}">
+                                        {{ posts.posted_by }}
+                                        <small class="text-muted"> {{ posts.date_posted|date:"F d, Y" }}</small>    
+                                    </div>
+                                    <h4 class=""article-title">{{ posts.title }}</h4>
+                                    <p class="article-content">{{ posts.content }}</p>
+                                </div>
+                    </article>
+                </div>
+                <div class="col">
+                </div>
+            </div>
+        </div>
         {% endfor %}
 {% endblock content %}

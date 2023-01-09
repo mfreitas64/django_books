@@ -89,21 +89,31 @@ body {
   }
 
   .book {
-    border: 1px outset black;
-    padding-top: 5px;
+    border: 1px outset rgb(0, 0, 0);
+    padding-top: 15px;
     padding-right: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
-    background-color: rgb(249, 246, 246);    
+    background-color: rgb(252, 246, 246);    
     text-align: center;
   }
 
   .margens {
-    margin-left: 0px;
+    margin-top: 5px;
+    margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
   }
 
   .left {
     text-align: left;
+  }
+
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0c0c0c ;
+    color: rgb(245, 240, 240);
+    text-align: center;
   }
