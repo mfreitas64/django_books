@@ -26,7 +26,9 @@
             </div> 
         </div>
     </div>
-        <h3>Posts</h3>
+        {% if books.posts_set.all %}
+            <h3>Posts</h3>
+        {% endif %}
         {% for posts in books.posts_set.all %}
         <div class="container"> 
             <div class="row">

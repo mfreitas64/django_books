@@ -13,9 +13,9 @@
     <link rel="stylesheet" type="text/css" href=" {% static '/books/main.css' %}">
 
     {% if title %}
-        <title>Clube de Leitura - {{ title }}</title/>
+        <title>O que farei com este livro? - {{ title }}</title/>
     {% else %}
-        <title>Clube de Leitura</title>   
+        <title>O que farei com este livro?s</title>   
     {% endif %}
 
 </head>
@@ -23,7 +23,7 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
           <div class="container">
-            <a class="navbar-brand mr-4" href="{% url 'book:index' %}">Club de Leitura</a>
+            <a class="navbar-brand mr-4" href="{% url 'book:index' %}">O que farei com este livro?</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -65,90 +65,66 @@
         </div>
       </main>
       <br><br>
-      <footer class="bg-light text-center text-lg-start">
+  <footer class="text-lg-start">
           <!-- Grid container -->
           <div class="container p-4">
             <!--Grid row-->
             <div class="row">
               <!--Grid column-->
-              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Site</h5>
 
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="#!" class="text-dark">Link 1</a>
+                    <a class="text-white" href="{% url 'book:index' %}">Home</a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">Link 2</a>
+                    <a class="text-white" href="{% url 'book:Books-About' %}">Sobre Nós</a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">Link 3</a>
+                    <a class="text-white" href="#">Contactos</a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">Link 4</a>
+                    <a class="text-white" href="#">Politíca de Privacidade</a>
+                  </li>
+                  <li>
+                    <a class="text-white" href="#">Termos de Utilização</a>
                   </li>
                 </ul>
               </div>
               <!--Grid column-->
 
               <!--Grid column-->
-              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-0">Links</h5>
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0">INFORMAçÃO ÚTIL</h5>
 
                 <ul class="list-unstyled">
                   <li>
-                    <a href="#!" class="text-dark">Link 1</a>
+                    <a class="text-white" href="#">FAQ</a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">Link 2</a>
+                    <a class="text-white" href="https://www.portaldaliteratura.com/" target="_blank">Portal da Literatura</a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">Link 3</a>
+                    <a class="text-white" href="https://www.ffms.pt/pt-pt/livraria" target="_blank">Fundação FMS</a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">Link 4</a>
+                    <a class="text-white" href="https://www.cupertino.pt/fundacao-cupertino-de-miranda/" target="_blank">Fundação Cupertino M</a>
                   </li>
                 </ul>
               </div>
               <!--Grid column-->
 
               <!--Grid column-->
-              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">PARCEIROS</h5>
 
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="#!" class="text-dark">Link 1</a>
+                    <a class="text-white" href="https://www.xylocopabooks.pt/" target="_blank">Xylocopa Books</a>
                   </li>
                   <li>
-                    <a href="#!" class="text-dark">Link 2</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-dark">Link 3</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-dark">Link 4</a>
-                  </li>
-                </ul>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-0">Links</h5>
-
-                <ul class="list-unstyled">
-                  <li>
-                    <a href="#!" class="text-dark">Link 1</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-dark">Link 2</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-dark">Link 3</a>
-                  </li>
-                  <li>
-                    <a href="#!" class="text-dark">Link 4</a>
+                    <a class="text-white" href="https://www.facebook.com/rordelivros/" target="_blank">ROR de Livros</a>
                   </li>
                 </ul>
               </div>
@@ -159,12 +135,11 @@
           <!-- Grid container -->
 
           <!-- Copyright -->
-          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+          <div class="text-center p-3" style="background-color:#0f0e0e">
+            © 2023 Copyright: MF
           </div>
           <!-- Copyright -->
-      </footer>
+</footer>
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -2,30 +2,36 @@
 {% load static %}
 
 {% block content %}
-<div class="col-12">
-    <h2 class="text-left">Bem vindos</h2>
-</div>
-<div class="container">
-    <div class="row" justify-content-start>
+<div class="container-fluid">
+    <div class="row">
         <div class="col-md-12">
-            <p>O nosso clube de leitura surge da tremenda paixão pelos livros e da vontade inabalável dos nossos colegas 
-            António Jorge, da Ror de Livros e Ana Pereira, da Xylocopa Books, partilharem os seus projetos com a nossa comunidade. 
-            Um encontro feliz que veio proporcionar aos afortunados membros deste club de leitura a troca de opiniões, reflexões e 
-            críticas sobre os livros que vamos lendo e trazendo para estas sessões. Sendo ainda, a prática da leitura, uma atividade 
-            pouco frequente entre os portugueses, e considerando o enorme valor cultural gerado por este pequeno grupo de leitores, 
-            achámos que para além das sessões físicas, que realizamos no último Domingo de cada mês, e que por várias razões têm uma 
-            lotação limitada, seria uma boa ideia abrir as portas virtuais desta experiência às pessoas que estão interessadas em 
-            acompanhar e contribuir para esta causa mui nobre que é o ato de ler.
-            <br><br>    
-            No nosso site podem encontrar toda a informação sobre as diversas sessões e os livros que foram apresentados. 
-            Poderão também criar uma conta e contribuir, de forma construtiva, com comentários sobre as várias obras apresentadas.    
-            </p>
+            <h4>Bem-vindo</h4>       
+            <p>Somos uma comunidade civil que partilha o gosto pela leitura.
+                Aqui apresentamos o resultado das nossas sessões
+                mensais. É, desde já, convidado a participar e a comentar os livros apresentados, 
+                basta criar uma conta e está pronto a partilhar. O debate é importante. Acreditmaos
+                que a troca de ideias enriquece a nossa experiência e percepção dos textos literários.
         </div>
+        <div>
+            &nbsp;
+        </div> 
+         <div class="col-md-12 brush">
+            <p class="bgfrase text-center">Os livros são refúgos da memória, espelhos onde nos olhamos para podermos
+                ser mais parecidos com aquilo que desejamos ser. Estes frágeis universos são 
+                a nossa força. É imprescindível cuidar de quem lê.
+            </p>    
+        </div>
+        <div class="col-md-12">       
+            <p style="font-size:10px">Manifesto pela leitura, Irene Vallejo.</p>
+        </div>
+        <div>
+            &nbsp;
+        </div> 
     </div>
-    <div class="col-12">
-        <h2 class="text-left">Sessões</h2>
+    <div class="row fcolor">
+        <h4>Sessões</h4>
     </div>
-    <div class="row" justify-content-start>
+    <div class="row bgsessoes">
         {% if displaybook %}
             {% for c in displaybook %}
             <div class="col-md-2 book margens">
