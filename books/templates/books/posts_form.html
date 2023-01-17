@@ -15,16 +15,24 @@
         </div>
     </div>
     <br>
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Criar Post</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Criar</button>
+    <div class="container"> 
+        <div class="row">
+            <div class="col">
             </div>
-        </form>
+            <div class="col-4" align="left">
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Criar Post</legend>
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type="submit">Criar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+            </div>
+        </div>
     </div>
 {% endblock content%}
