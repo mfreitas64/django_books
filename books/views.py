@@ -16,7 +16,7 @@ class IndexView(generic.ListView):
     context_object_name = 'displaybook'
 
     def get_queryset(self):
-        return Sessoes.objects.order_by('sessao_date')[:12]
+        return Sessoes.objects.order_by('sessao_date')[:20]
 
 class DetailView(generic.DetailView):
     model = Sessoes
@@ -61,6 +61,9 @@ class PostsCreateView(CreateView):
         form.instance.bookid_id = self.kwargs['pk']
         form.save()
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('book:detalhe-livro', kwargs={'pk': self.kwargs['pk']})
 
 def about(request):
     return render(request, 'books/about.html', {'title': 'About'})

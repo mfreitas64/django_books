@@ -13,7 +13,7 @@
         {% for livros in sessoes.books_set.all %}
             <div class="col-md-3 book margens"> 
                 <img widht="128" height="200" src= {{ livros.image.url }}/>
-                <p><a href="{% url 'book:detalhe_livro' livros.id %}"> {{ livros.book_name }} </a></p>
+                <p><a href="{% url 'book:detalhe-livro' livros.id %}"> {{ livros.book_name }} </a></p>
                 <p> Autor: {{ livros.author }}</p>
                 <p style="font-size:11px">Apresentado por: {{ livros.presented_by}}</p>
             </div>

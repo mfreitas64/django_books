@@ -11,5 +11,5 @@ urlpatterns = [
     path('novasessao/', SessoesCreateView.as_view(), name='criar-sessao'),
     path('novolivro/', BooksCreateView.as_view(), name='criar-livro'),
     path('novopost/<int:pk>/', PostsCreateView.as_view(), name='novopost'),
-    path('detalhe_livro/<int:pk>/', views.DetalhesLivro.as_view(), name='detalhe_livro'),
+    path('detalhe-livro/<int:pk>/', views.DetalhesLivro.as_view(), name='detalhe-livro'),
 ]

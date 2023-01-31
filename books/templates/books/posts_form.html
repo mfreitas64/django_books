@@ -8,10 +8,12 @@
                 <img class="icenter" align="center" widht="128" height="200" src= {{ book.image.url }}/>   
             </div>
             <div class="col-md-6">
-                <h4>Este é o livro que está a comentar: {{ book.book_name }}</h4>
-                <h5> {{ object.book_name }} </h5> 
+                <h4 style="color: grey">Este é o livro que está a comentar:</h4>
+                <h5> {{ book.book_name }} </h5>
+                <p style="font-size:11px">Autor: {{ book.author }}</p>
+                <p style="font-size:11px">Descrição: {{ book.description }}</p>
                 <p style="font-size:11px">Apresentado por: {{ book.presented_by }}</p>
-            </div> 
+            </div>
         </div>
     </div>
     <br>
@@ -19,7 +21,7 @@
         <div class="row">
             <div class="col">
             </div>
-            <div class="col-4" align="left">
+            <div class="col-8" align="left">
                 <form method="POST">
                     {% csrf_token %}
                     <fieldset class="form-group">

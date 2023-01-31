@@ -26,7 +26,7 @@ class Books(models.Model):
         return self.book_name
 
     def get_absolute_url(self):
-        return reverse('book:detalhe_livro', kwargs={'pk': self.pk})
+        return reverse('book:detalhe-livro', kwargs={'pk': self.pk})
 
 class Posts(models.Model):
     bookid = models.ForeignKey(Books, on_delete=models.CASCADE)
@@ -38,5 +38,6 @@ class Posts(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolute_url(self):
-        return reverse('book:index')
+ #   def get_absolute_url(self):
+ #       return reverse('book:detalhe-livro')
+ #      return reverse('book:index')
