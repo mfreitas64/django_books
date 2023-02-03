@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col">
         </div>
-        <div class="col-4" align="left">
+        <div class="col-8" align="left">
             <form method="POST">
                 {% csrf_token %}
                 <fieldset class="form-group">
@@ -14,6 +14,9 @@
                 </fieldset>
                 <div class="form-group">
                     <button class="btn btn-outline-info" type="submit">Entrar</button>
+                    <small class="text-muted ml-2">
+                        <a href="{% url 'password_reset' %}">Recuperar Password</a>
+                    </small>
                 </div>
             </form>
             <div class="border-top pt-3">
