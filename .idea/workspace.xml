@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbe210e9-e0a6-4449-b2a3-f4f04627c759" name="Changes" comment="Changes 03022023">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booksdb.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/booksdb.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_books/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_books/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="bbe210e9-e0a6-4449-b2a3-f4f04627c759" name="Changes" comment="Changes 03022023" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,7 +128,28 @@
       <option name="project" value="LOCAL" />
       <updated>1675465350345</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changes 03022023">
+      <created>1675600293687</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675600293687</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes 03022023">
+      <created>1675600302595</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675600302595</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes 03022023">
+      <created>1675600307204</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675600307204</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +166,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes on 03022023" />
     <MESSAGE value="Changes on 31012023" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Changes 03022023" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes 03022023" />
   </component>
 </project>
